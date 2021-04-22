@@ -1,18 +1,13 @@
-import React, { useEffect } from 'react';
-import { connect } from 'react-redux';
-import { fetchPosts } from '../actions';
+import React, { useEffect } from "react";
+import { connect } from "react-redux";
+import { fetchPosts } from "../actions";
 
 const PostList = (props) => {
+  useEffect(() => {
+    props.fetchPosts();
+  });
 
-    useEffect(() => {
-        props.fetchPosts();
-    })
-
-    return (
-        <div>
-            Hey there!!
-        </div>
-    )
+  return <div>WTF!!</div>;
 };
 
 export default connect(null, { fetchPosts })(PostList);
